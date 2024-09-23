@@ -8,7 +8,6 @@ import { Line } from 'react-chartjs-2';
 // Register Chart.js components
 ChartJS.register(CategoryScale, LinearScale, BarElement, PointElement, LineElement, Title, Tooltip, Legend);
 
-
 export default function Chart() : React.ReactElement{
   const chartRef = useRef(null);
   const labels = ["jan", "feb", "march", "app", "may", "jun", "jul"];
@@ -21,7 +20,10 @@ export default function Chart() : React.ReactElement{
     responsive: false,
   };
   const toggleDataset = (datasetIndex:number) => {
-    const chartInstance = chartRef.current;
+    const chartInstance : any = chartRef.current;
+    if(chartInstance === null){
+        return <>no ref</>
+    }
     console.log(chartRef.current)
     const meta = chartInstance.getDatasetMeta(datasetIndex);
    meta.hidden = !meta.hidden; // Toggle visibility

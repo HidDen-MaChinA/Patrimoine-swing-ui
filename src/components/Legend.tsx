@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function CustomLegend (props : { datasets: any, onToggleDataset : (index:number)=>void}){
+export default function CustomLegend (props : { datasets: any, onToggleDataset : (index:number)=>void}) : React.ReactElement{
     const {datasets, onToggleDataset} = props;
     console.log(datasets[0].borderColor)
   return (
