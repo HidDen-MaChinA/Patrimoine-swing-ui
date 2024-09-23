@@ -6,11 +6,13 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
+    "lint": "eslint ./src/**/*.tsx",
+    "format": "prettier .",
     "preview": "vite preview"
   },
   "dependencies": {
     "chart.js": "^4.4.4",
+    "prettier": "^3.3.3",
     "react": "^18.3.1",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.3.1",

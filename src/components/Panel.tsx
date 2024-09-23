@@ -4,7 +4,7 @@ import Outputs from "./Outputs";
 
 export default function Panel(): React.ReactElement {
     return(
-        <div>
+        <div className="rounded-lg overflow-hidden">
             <Inputs />
             <Outputs />
         </div>

@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function Inputs(): React.ReactElement{
     const categories = ["Agregat", "Tresorerie", "Immobilisation", "Obligations"]
+    const [selected, setSelected] = useState({
+        agregat: true,
+        tresorerie: true,
+        immobilisation: true,
+        obligation: true
+    });
     return(
-    <div className="flex flex-col gap-2 bg-gray-100 p-3 rounded-lg">
+    <div className="flex flex-col gap-2 bg-gray-100 p-3">
         <div className="flex flex-row justify-between">
             <div>
                 <span>Patrimoine: </span>
